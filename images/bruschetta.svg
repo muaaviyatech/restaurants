@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="260" viewBox="0 0 400 260" aria-hidden="true">
+  <rect width="400" height="260" rx="12" fill="#fff3e6" />
+  <!-- bread base -->
+  <g transform="translate(200,130)">
+    <ellipse rx="120" ry="50" fill="#e2b57b" />
+    <ellipse rx="110" ry="38" fill="#f6d9b2" transform="translate(0,-6)" />
+    <!-- tomato pieces -->
+    <g fill="#e74c3c">
+      <circle cx="-40" cy="-6" r="10" />
+      <circle cx="10" cy="-12" r="12" />
+      <circle cx="48" cy="-2" r="9" />
+    </g>
+    <!-- basil -->
+    <g fill="#2f9b4a">
+      <path d="M-50 2 q12 -18 28 0 q-12 8 -28 0z" />
+    </g>
+  </g>
+</svg>

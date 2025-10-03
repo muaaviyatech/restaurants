@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="260" viewBox="0 0 400 260" aria-hidden="true">
+  <rect width="400" height="260" rx="12" fill="#eef8ff" />
+  <g transform="translate(200,130)">
+    <!-- tall glass -->
+    <rect x="-30" y="-40" width="60" height="80" rx="10" fill="#ccefff" stroke="#9fd8ff" stroke-width="2" />
+    <circle cx="-8" cy="-18" r="3" fill="#9fd8ff" />
+    <circle cx="10" cy="-6" r="2.5" fill="#bff0ff" />
+    <!-- cup -->
+    <ellipse rx="36" ry="6" fill="#bfe8ff" transform="translate(0,46)" />
+  </g>
+</svg>

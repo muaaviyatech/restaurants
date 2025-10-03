@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Delizia — Restaurant</title>
+		<link rel="stylesheet" href="styles.css" />
+		<meta name="description" content="Delizia Restaurant — simple responsive restaurant demo with menu, ordering and reservations." />
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="container header-inner">
+				<h1 class="logo">Delizia</h1>
+								<nav class="nav">
+										<a href="#menu">Menu</a>
+										<a href="#about">About</a>
+										<a href="#contact">Contact</a>
+										<button id="view-order" class="btn btn-outline">View Order (<span id="order-count">0</span>)</button>
+								</nav>
+			</div>
+		</header>
+
+		<main>
+			<section class="hero">
+				<div class="container hero-inner">
+					<div>
+						<h2>Fresh food, cozy place</h2>
+						<p>Handmade dishes from seasonal ingredients. Order online or reserve a table.</p>
+						<div class="hero-actions">
+							<a class="btn" href="#menu">Explore Menu</a>
+							<button id="reserve-btn" class="btn btn-outline">Reserve a Table</button>
+						</div>
+					</div>
+								<div class="hero-art" aria-hidden="true">
+									<img src="images/hero.svg" alt="Delicious food" class="hero-img" />
+								</div>
+				</div>
+			</section>
+
+			<section id="menu" class="container menu-section">
+				<header class="section-header">
+					<h3>Our Menu</h3>
+					<div class="controls">
+						<div class="filters" role="tablist" aria-label="Menu categories">
+							<button class="filter active" data-cat="all">All</button>
+							<button class="filter" data-cat="starters">Starters</button>
+							<button class="filter" data-cat="mains">Mains</button>
+							<button class="filter" data-cat="desserts">Desserts</button>
+							<button class="filter" data-cat="drinks">Drinks</button>
+						</div>
+						<input id="search" class="search" type="search" placeholder="Search dishes..." aria-label="Search menu" />
+					</div>
+				</header>
+
+				<div id="menu-grid" class="menu-grid" aria-live="polite"></div>
+			</section>
+
+			<section id="about" class="container about">
+				<h3>About Delizia</h3>
+				<p>Delizia is a family-run restaurant serving modern comfort food. We focus on quality ingredients and friendly service.</p>
+			</section>
+
+			<section id="contact" class="container contact">
+				<h3>Contact</h3>
+				<p>Email: hello@delizia.example | Phone: (555) 123-4567</p>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<div class="container">
+				<small>&copy; <span id="year"></span> Delizia Restaurant — Built with HTML, CSS & JavaScript</small>
+			</div>
+		</footer>
+
+		<!-- Order / Reservation modals -->
+		<div id="order-modal" class="modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
+			<div class="modal-panel">
+				<button class="modal-close" data-dismiss>×</button>
+				<h4>Your Order</h4>
+				<div id="order-list" class="order-list"></div>
+				<div class="order-actions">
+					<div class="order-total">Total: $<span id="order-total">0.00</span></div>
+					<button id="checkout" class="btn">Checkout</button>
+				</div>
+			</div>
+		</div>
+
+		<div id="reserve-modal" class="modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
+			<div class="modal-panel">
+				<button class="modal-close" data-dismiss>×</button>
+				<h4>Reserve a Table</h4>
+				<form id="reserve-form">
+					<label>Name<input name="name" required /></label>
+					<label>Email<input name="email" type="email" required /></label>
+					<label>Date<input name="date" type="date" required /></label>
+					<label>Time<input name="time" type="time" required /></label>
+					<label>Guests<input name="guests" type="number" min="1" max="20" value="2" required /></label>
+					<div class="form-actions"><button class="btn" type="submit">Confirm</button></div>
+				</form>
+				<div id="reserve-success" class="hidden"></div>
+			</div>
+		</div>
+
+		<script src="script.js" defer></script>
+	</body>
+</html>
